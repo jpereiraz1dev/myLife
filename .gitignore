@@ -173,3 +173,19 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
 
+# ==========================================
+# Customizações Extras (Banco de Dados e Migrations)
+# ==========================================
+
+# Ignora QUALQUER banco de dados SQLite do projeto
+*.db
+*.sqlite3
+*.sqlite3-journal
+
+# SE VOCÊ QUISER IGNORAR COMPLETAMENTE TODAS AS MIGRATIONS:
+**/migrations/*
+# Mas garante que o arquivo __init__.py da pasta seja mantido para o Python reconhecer o módulo
+!**/migrations/__init__.py
+
+# Caso use Flask-Migrate (que gera uma pasta chamada 'migrations' na raiz)
+migrations/
